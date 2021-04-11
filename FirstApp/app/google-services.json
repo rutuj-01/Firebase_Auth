@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "886844677529",
+    "project_id": "pothole-detection-58c55",
+    "storage_bucket": "pothole-detection-58c55.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:886844677529:android:89e2d29f9ce72ef9da8708",
+        "android_client_info": {
+          "package_name": "com.example.firstapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "886844677529-n1086afu8uhjpch6hlnt4vajbbii200t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.firstapp",
+            "certificate_hash": "53da0306240419e78989006effe9caf5b7199f66"
+          }
+        },
+        {
+          "client_id": "886844677529-n0voie4nqeecm72ubpkuscukj2bklvi0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCI0SYr6m0BOtdHwkOQqujljI5boBaA_Ag"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "886844677529-n0voie4nqeecm72ubpkuscukj2bklvi0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
