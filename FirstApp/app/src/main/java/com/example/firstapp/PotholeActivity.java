@@ -46,7 +46,7 @@ public class PotholeActivity extends AppCompatActivity implements SensorEventLis
     //Vibrator v;
     LocationManager locationManager;
 
- 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -167,6 +167,8 @@ public class PotholeActivity extends AppCompatActivity implements SensorEventLis
                         addresses.get(0).getAddressLine(1) + ", " + addresses.get(0).getAddressLine(2));
                 DatabaseReference firebase = FirebaseDatabase.getInstance().getReference().child("Pothole").child(FirebaseAuth.getInstance().getCurrentUser().getUid().toString());
                 firebase.push().setValue(t2.getText().toString());
+
+
             } catch (Exception e) {
 
             }
