@@ -1,4 +1,4 @@
-package com.android.internal.telephony;
+package com.example.firstapp;
 
 public interface ITelephony {
     boolean endCall();

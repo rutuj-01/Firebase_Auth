@@ -41,9 +41,23 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        simpleSwitch = (Switch) findViewById(R.id.driveMode);
-        //submit= (Button) findViewById(R.id.submit);
+        Button driveButton=(Button )findViewById(R.id.driveButton);
+        Button potholeButton=(Button )findViewById(R.id.potholeButton);
 
+        driveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, DriveActivity.class));
+                finish();
+            }
+        });
+        //submit= (Button) findViewById(R.id.submit);
+        potholeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,PotholeActivity.class));
+            }
+        });
     }
 
 

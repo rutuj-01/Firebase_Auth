@@ -51,12 +51,9 @@ public class RegisterActivity extends AppCompatActivity {
         rootNode= FirebaseDatabase.getInstance();
         reference =rootNode.getReference("users");
 
-        String name= userName.getText().toString();
-        String email1= userEmail.getText().toString();
-        String phone= userMobile.getText().toString();
 
-        UserHelperClass helperClass = new UserHelperClass(name,email1,phone);
-        reference.child(phone).setValue(helperClass);
+
+
                 String email = userEmail.getText().toString().trim();
                 String password = userPassword.getText().toString().trim();
 
@@ -85,8 +82,14 @@ public class RegisterActivity extends AppCompatActivity {
                                 Log.i("SUCCESS", "New user registration: " + task.isSuccessful());
 
                                 if (!task.isSuccessful()) {
+
                                     RegisterActivity.this.showToast("Authentication failed. " + task.getException());
                                 } else {
+                                    String name= userName.getText().toString();
+                                    String email1= userEmail.getText().toString();
+                                    String phone= userMobile.getText().toString();
+                                    UserHelperClass helperClass = new UserHelperClass(name,email1,phone);
+                                    reference.child(firebaseAuth.getCurrentUser().getUid().toString()).setValue(helperClass);
                                     RegisterActivity.this.startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
                                     RegisterActivity.this.finish();
                                 }

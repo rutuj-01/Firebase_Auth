@@ -7,46 +7,51 @@
     tools:context=".MainActivity">
 
 
-    <Switch
-        android:id="@+id/driveMode"
-        android:layout_width="218dp"
-        android:layout_height="64dp"
-        android:text="DriveMode"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <TextView
+        style="@style/viewParent.headerText.NoMode"
+        android:layout_width="219dp"
+        android:layout_height="163dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:text="Choose \nyour mode :)"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toTopOf="@+id/driveButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.139" />
+        app:layout_constraintVertical_bias="0.506" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="292dp"
-
-        android:onClick="startService"
-        android:text="Start Services"
+    <br.com.simplepass.loading_button_lib.customViews.CircularProgressButton
+        android:id="@+id/driveButton"
+        style="@style/loginButton"
+        android:layout_gravity="center_horizontal"
+        android:text="Drive Mode"
+        app:initialCornerAngle="27dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button"
-        app:layout_constraintHorizontal_bias="0.47"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.414"
+        app:spinning_bar_color="#FFF"
+        app:spinning_bar_padding="6dp"
+        app:spinning_bar_width="4dp" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/button2"
-        android:layout_alignStart="@+id/button2"
-        android:layout_alignLeft="@+id/button2"
-        android:layout_alignEnd="@+id/button2"
-        android:layout_alignRight="@+id/button2"
-        android:layout_marginEnd="56dp"
-        android:layout_marginBottom="292dp"
-        android:onClick="stopService"
-        android:text="Stop Services"
+    <br.com.simplepass.loading_button_lib.customViews.CircularProgressButton
+        android:id="@+id/potholeButton"
+        style="@style/loginButton"
+        android:layout_gravity="center_horizontal"
+        android:text="Pothole Mode"
+        app:initialCornerAngle="27dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.623"
+        app:spinning_bar_color="#FFF"
+        app:spinning_bar_padding="6dp"
+        app:spinning_bar_width="4dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

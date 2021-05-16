@@ -3,7 +3,7 @@ package com.example.firstapp;
 public class UserHelperClass {
     String name;
     String email;
-
+    static public String phoneno;
     public String getName() {
         return name;
     }
